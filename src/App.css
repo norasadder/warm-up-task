@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.memberData {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.memberData p {
+  padding: 5px;
+  color: #bdb9b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.memberRow {
+  display: flex;
+  justify-content: space-between;
+  border: solid 2px #e8e5e5;
+  margin: 2%;
+  border-radius: 5px;
+  padding: 1%;
+  height: 5vh;
+}
+
+.filterableMemberTable {
+  width: 30%;
+  margin: auto;
+}
+
+.memberIcon {
+  padding: 5px;
+  height: 60%;
+  width: auto;
+}
+
+.checkBox {
+  border: solid 5px green;
+  border-radius: 50%;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid 2px #e8e5e5;
+  padding: 1%;
+  box-sizing: border-box;
+  margin: 2%;
+  margin-bottom: 10%;
+  padding: 1%;
+  height: 6vh;
+}
+
+.searchBar input {
+  width: 88%;
+  height: auto;
+  border: none;
+  margin-left: 2%;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
+
+.searchBar img {
+  width: 7%;
+  height: auto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 20px;
+  padding-left: 5%;
+  margin-bottom: 2%;
+  font-weight: bold;
+}
+
+.actionButtons {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  margin: auto;
+  height: 6vh;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.cancelButton {
+  height: 100%;
+  width: 40%;
+  border: solid 2px rgb(220, 212, 212);
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #e8e5e5;
+}
+
+.saveButton {
+  height: 100%;
+  width: 40%;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    rgb(133, 161, 218),
+    rgb(84, 112, 166)
+  );
+  cursor: pointer;
+  color: rgb(247, 239, 239);
+}
+
+.checkbox-container {
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+  padding-left: 35px;
+  margin-right: 15px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-container label::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e8e5e5;
+  border-radius: 50%;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  background-image: url(./verified.png);
+  background-size: cover;
+  border-color: rgb(77, 148, 77);
 }
